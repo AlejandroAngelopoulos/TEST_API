@@ -32,16 +32,29 @@
             this.btnGet = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // grvProducts
             // 
+            this.grvProducts.AllowUserToAddRows = false;
+            this.grvProducts.AllowUserToDeleteRows = false;
+            this.grvProducts.AllowUserToResizeColumns = false;
+            this.grvProducts.AllowUserToResizeRows = false;
+            this.grvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grvProducts.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.grvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvProducts.Location = new System.Drawing.Point(13, 13);
+            this.grvProducts.MultiSelect = false;
             this.grvProducts.Name = "grvProducts";
+            this.grvProducts.ReadOnly = true;
+            this.grvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grvProducts.Size = new System.Drawing.Size(537, 233);
             this.grvProducts.TabIndex = 0;
+            this.grvProducts.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.grvProducts_DataBindingComplete);
+            this.grvProducts.SelectionChanged += new System.EventHandler(this.grvProducts_SelectionChanged);
             // 
             // btnGet
             // 
@@ -69,15 +82,41 @@
             this.lblID.TabIndex = 3;
             this.lblID.Text = "ID:";
             // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(298, 253);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(113, 23);
+            this.btnNew.TabIndex = 4;
+            this.btnNew.Text = "New Product";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(437, 253);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(113, 23);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Delete Product";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // frmProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(562, 283);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnGet);
             this.Controls.Add(this.grvProducts);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmProducts";
             this.Text = "Products Form";
             this.Load += new System.EventHandler(this.frmProducts_Load);
@@ -93,6 +132,8 @@
         private System.Windows.Forms.Button btnGet;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 

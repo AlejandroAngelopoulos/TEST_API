@@ -26,7 +26,8 @@ namespace TestApi.Controllers
         }
 
         // GET: api/Products/5
-        
+        [Route("{id:int}")]
+        [ResponseType(typeof(Product))]
         public async Task<IHttpActionResult> GetProduct(int id)
         {
             Product product = await db.Products.FindAsync(id);
@@ -89,6 +90,7 @@ namespace TestApi.Controllers
         }
 
         // DELETE: api/Products/5
+        [Route("{id:int}")]
         [ResponseType(typeof(Product))]
         public async Task<IHttpActionResult> DeleteProduct(int id)
         {
