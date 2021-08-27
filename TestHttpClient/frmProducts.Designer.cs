@@ -88,7 +88,7 @@
             this.btnNew.Location = new System.Drawing.Point(264, 253);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(84, 23);
-            this.btnNew.TabIndex = 4;
+            this.btnNew.TabIndex = 3;
             this.btnNew.Text = "New Product";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
@@ -108,7 +108,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(354, 253);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(95, 23);
-            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update Product";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);

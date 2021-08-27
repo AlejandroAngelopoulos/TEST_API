@@ -67,7 +67,7 @@
             this.txtCategory.Location = new System.Drawing.Point(64, 72);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(291, 20);
-            this.txtCategory.TabIndex = 5;
+            this.txtCategory.TabIndex = 2;
             // 
             // lblCategory
             // 
@@ -101,7 +101,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(64, 138);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(134, 23);
-            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -111,7 +111,7 @@
             this.btnCancel.Location = new System.Drawing.Point(221, 138);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 23);
-            this.btnCancel.TabIndex = 9;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
