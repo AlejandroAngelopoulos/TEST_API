@@ -18,8 +18,10 @@ namespace TestApi.Models
         public TestApiContext() : base("name=TestApiContext")
         {
         }
-
+     
         public System.Data.Entity.DbSet<TestApi.Models.Product> Products { get; set; }
-    
+
+        public System.Data.Entity.DbSet<TestApi.Models.User> Users { get; set; }
+       
     }
 }
