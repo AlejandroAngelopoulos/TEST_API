@@ -120,6 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(367, 182);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -134,7 +135,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCreate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create/Update Product";
+            this.Load += new System.EventHandler(this.frmCreate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

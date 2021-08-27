@@ -34,6 +34,7 @@
             this.lblID = new System.Windows.Forms.Label();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,9 +85,9 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(298, 253);
+            this.btnNew.Location = new System.Drawing.Point(264, 253);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(113, 23);
+            this.btnNew.Size = new System.Drawing.Size(84, 23);
             this.btnNew.TabIndex = 4;
             this.btnNew.Text = "New Product";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -94,13 +95,23 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(437, 253);
+            this.btnDelete.Location = new System.Drawing.Point(455, 253);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(113, 23);
+            this.btnDelete.Size = new System.Drawing.Size(95, 23);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete Product";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(354, 253);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(95, 23);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update Product";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // frmProducts
             // 
@@ -108,6 +119,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(562, 283);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.lblID);
@@ -118,8 +130,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmProducts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Products Form";
-            this.Load += new System.EventHandler(this.frmProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grvProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,6 +146,7 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
 

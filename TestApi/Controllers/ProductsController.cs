@@ -40,17 +40,13 @@ namespace TestApi.Controllers
         }
 
         // PUT: api/Products/5
+        
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutProduct(int id, Product product)
+        public async Task<IHttpActionResult> PutProduct(Product product)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-            }
-
-            if (id != product.Id)
-            {
-                return BadRequest();
             }
 
             db.Entry(product).State = EntityState.Modified;
@@ -59,16 +55,9 @@ namespace TestApi.Controllers
             {
                 await db.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
-                if (!ProductExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                throw ex;
             }
 
             return StatusCode(HttpStatusCode.NoContent);
