@@ -35,7 +35,7 @@ namespace TestHttpClient
 
 
                 HttpResponseMessage response;
-                client.BaseAddress = new Uri("http://10.56.0.41:10093/");
+                client.BaseAddress = new Uri("http://192.168.43.155:10093/");
 
                 // Add an Accept header for JSON format.
                 client.DefaultRequestHeaders.Accept.Add(
@@ -91,7 +91,7 @@ namespace TestHttpClient
             {
 
                 HttpResponseMessage response;
-                client.BaseAddress = new Uri("http://10.56.0.41:10093/");
+                client.BaseAddress = new Uri("http://192.168.43.155:10093/");
                 // Add an Accept header for JSON format.
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
