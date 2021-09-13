@@ -31,8 +31,8 @@
             this.lblInfo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -64,35 +64,36 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "User:";
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(57, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtUser.Location = new System.Drawing.Point(57, 53);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(231, 20);
+            this.txtUser.TabIndex = 1;
             // 
-            // textBox2
+            // txtPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(57, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(231, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtPass.Location = new System.Drawing.Point(57, 82);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(231, 20);
+            this.txtPass.TabIndex = 2;
             // 
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(57, 118);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(93, 23);
-            this.btnLogin.TabIndex = 5;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Log In";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(195, 118);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(93, 23);
-            this.btnCancel.TabIndex = 6;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -104,11 +105,14 @@
             this.ClientSize = new System.Drawing.Size(296, 157);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -122,8 +126,8 @@
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCancel;
     }
